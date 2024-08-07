@@ -2,21 +2,23 @@
 layout: about
 title: welcome
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <b>reframe our relationship with technology</b>
 
 profile:
   align: right
   image: about_image_michael_altrock.jpg
   image_circular: false # crops the image to make it circular
-  more_info: #
+  more_info:
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `about_image_michael_altrock.jpg` and put it in the `img/` folder.
+Hi.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I've always liked solving puzzles and problems. Homeoffice culture made me painfully aware of how much my own toolkit still needs to develop. Maintaining the minimum requirements to run the <b>software of life</b> has become more difficult the more I only focus on developing the software part.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I envision this to become a <b>tool kit</b> to change our relationship with technology - not just for technology people, paid and/or passionate. My hope is to create a framework for analytical and emotional skills that offer healthy fulfillment in general. Quite literally: <pre><lframe>software-of-life</lframe></pre>
+
+My first step is to share applicable knowledge bites and experiences that helped me and my clients overcome plateaus and roadblocks. Most of what stopped us so far comes down to building and maintaining a healthy body, brain and belief system. I hope to build a HOW-TO-LIFE for myself and to contribute to our collective journey in the process.
