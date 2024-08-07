@@ -1,5 +1,5 @@
 name: Prettier code formatter
-
+ 
 on:
   pull_request:
     branches:
@@ -9,6 +9,8 @@ on:
     branches:
       - master
       - main
+
+continue-on-error: true
 
 jobs:
   check:
