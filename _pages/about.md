@@ -1,6 +1,7 @@
 ---
 layout: about
 title: welcome
+nav_title: welcome here
 permalink: /
 subtitle: reframe our relationship with technology
 
