@@ -1295,3 +1295,24 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+// Modify mobile only elements to show after a certain breakpoint
+
+$breakpoint: 575px;
+$adjusted-breakpoint: $breakpoint + 1px;
+
+.mobile {
+  display: inherit;
+
+  @media (min-width: $adjusted-breakpoint) {
+    display: none;
+  }
+}
+
+.not-mobile {
+  display: none;
+
+  @media (min-width: $adjusted-breakpoint) {
+    display: block;
+  }
+}
