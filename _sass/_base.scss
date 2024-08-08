@@ -1301,7 +1301,7 @@ ninja-keys::part(ninja-input-wrapper) {
 $breakpoint: 575px;
 $adjusted-breakpoint: $breakpoint + 1px;
 
-.mobile {
+.mobile-display {
   display: inherit;
 
   @media (min-width: $adjusted-breakpoint) {
@@ -1309,7 +1309,7 @@ $adjusted-breakpoint: $breakpoint + 1px;
   }
 }
 
-.not-mobile {
+.mobile-hide {
   display: none;
 
   @media (min-width: $adjusted-breakpoint) {
