@@ -25,4 +25,4 @@ My hope is to create a framework for the necessary analytical and emotional skil
 
 We can move towards that by building and maintaining a healthy body, brain and belief system. My first step is to share applicable knowledge bites and experiences, that helped me and my clients overcome our plateaus and roadblocks both personal and professional. I hope to contribute to a HOW-TO-LIFE for this current societal process.
 
-<i>Honestly, i'm doing this for myself first because it gives me a framework for my own struggle. Also I have a chance to learn by sharing & teaching and I get to help other people – YEEEY, thats really cool. I would be honoured if you share this journey with me!</i>
+<text class="text-sub-like">Honestly, I'm doing this for myself first. It gives me a framework for my own struggle, a chance to learn by sharing & teaching and I get to help other people – YEEEY, thats really cool. I would be honoured if you share this journey with me!</text>
