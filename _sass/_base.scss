@@ -1305,23 +1305,18 @@ ninja-keys::part(ninja-input-wrapper) {
   color: var(--global-text-color);
 }
 
-// Modify mobile only elements to show after a certain breakpoint
-
-$breakpoint: 575px;
-$adjusted-breakpoint: $breakpoint + 1px;
-
-.mobile-display {
-  display: inherit;
-
-  @media (min-width: $adjusted-breakpoint) {
-    display: none;
-  }
+// remove list-style-type from no-marker class
+.no-marker {
+  list-style-type: none;
 }
 
-.mobile-hide {
-  display: none;
-
-  @media (min-width: $adjusted-breakpoint) {
-    display: block;
-  }
+// override nav-bar flex default behaviour
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
 }
+
+// add extra padding to nav-items
+.nav-item{
+  padding-left: 8px;
+  }

@@ -25,53 +25,12 @@
         <div class="navbar-brand social">{% include social.liquid %}</div>
       {% endif %}
 
-      <!-- Navbar Toggle -->
-      <!-- Theme Toggle and Search Elements for larger viewport devices -->
-      {% if site.search_enabled %}
-        <!-- Search -->
-        <div class="mobile-display">
-          <li class="nav-item">
-            <button id="search-toggle" title="Search" onclick="openSearchModal()">
-              <span class="nav-link"><i class="ti ti-search"></i></span>
-            </button>
-          </li>
-        </div>
-      {% endif %}
-      {% if site.enable_darkmode %}
-        <!-- Toogle theme mode -->
-        <div class="mobile-display">
-          <li class="toggle-container">
-            <button id="light-toggle" title="Change theme">
-              <i class="ti ti-sun-moon" id="light-toggle-system"></i>
-              <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
-              <i class="ti ti-sun-filled" id="light-toggle-light"></i>
-            </button>
-          </li>
-        </div>
-      {% endif %}
-      
-      <button
-        class="navbar-toggler collapsed ml-auto"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-
-      <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+        <div class="navbar-nav ml-auto">
           {% for page in site.pages %}
             {% if page.permalink == '/' %} {% assign nav_title = page.title %} {% endif %}
           {% endfor %}
 
-          <!-- About -->
+          {% comment %} <!-- About -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">
               {{- about_title }}
@@ -79,8 +38,18 @@
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
-          </li>
+          </li> {% endcomment %}
 
+        <!-- Theme Toggle and Search Elements for larger viewport devices -->
+        {% if site.search_enabled %}
+          <!-- Search -->
+          <li class="nav-item no-marker">
+            <button id="search-toggle" title="Search" onclick="openSearchModal()">
+              <span class="nav-link"><i class="ti ti-search"></i></span>
+            </button>
+           </li>
+        {% endif %}
+        
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
@@ -133,31 +102,17 @@
               {% endif %}
             {% endif %}
           {% endfor %}
-          <!-- Theme Toggle and Search Elements for larger viewport devices -->
-          {% if site.search_enabled %}
-            <!-- Search -->
-            <div class="mobile-hide">
-              <li class="nav-item">
-                <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                  <span class="nav-link"><i class="ti ti-search"></i></span>
-                </button>
-              </li>
-            </div>
-          {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
-            <div class="mobile-hide">
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="ti ti-sun-moon" id="light-toggle-system"></i>
-                  <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
-                  <i class="ti ti-sun-filled" id="light-toggle-light"></i>
-                </button>
-              </li>
-            </div>
+            <li class="nav-item toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
+                <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
+                <i class="ti ti-sun-filled" id="light-toggle-light"></i>
+              </button>
+            </li>
           {% endif %}
-        </ul>
-      </div>
+        </div>
     </div>
   </nav>
   {% if site.enable_progressbar %}
