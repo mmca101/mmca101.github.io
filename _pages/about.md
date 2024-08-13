@@ -19,9 +19,10 @@ social: true # includes social icons at the bottom of the page
 
 Hi.
 
-I've always liked solving puzzles and problems. Homeoffice culture made me painfully aware of how much my own toolkit still needs to develop. Maintaining the minimum requirements to run the <b>software of life</b> has become more difficult the more I only focus on developing the software part.
+I have always liked to solve puzzles & problems and to improve & grow. And yet, maintaining the minimum requirements to run the SOFTWARE OF LIFE has become more difficult. Shifting to work from home made me painfully aware of how much more my own toolkit still needs to develop. It is easier to loose track of WHY we do what we do than ever before.
 
-I envision this to become a <b>tool kit</b> to change our relationship with technology - not just for technology people, paid and/or passionate. My hope is to create a framework for analytical and emotional skills that offer healthy fulfillment in general.
+My hope is to create a framework for the necessary analytical and emotional skills that offer a healthy and fulfilled relationship with our tools, our tribe and ourselves – a tool kit to change our relationship with technology, not just for technology people, both paid and passionate, but for everyone.
 
-My first step is to share applicable knowledge bites and experiences that helped me and my clients overcome plateaus and roadblocks. Most of what stopped us so far comes down to building and maintaining a healthy body, brain and belief system. I hope to build a HOW-TO-LIFE for myself and to contribute to our collective journey in the process.
+We can move towards that by building and maintaining a healthy body, brain and belief system. My first step is to share applicable knowledge bites and experiences, that helped me and my clients overcome our plateaus and roadblocks both personal and professional. I hope to contribute to a HOW-TO-LIFE for this current societal process.
 
+<i>Honestly, i'm doing this for myself first because it gives me a framework for my own struggle. Also I have a chance to learn by sharing & teaching and I get to help other people – YEEEY, thats really cool. I would be honoured if you share this journey with me!</i>
