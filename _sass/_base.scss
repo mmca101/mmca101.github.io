@@ -208,7 +208,7 @@ ul.task-list input[type="checkbox"] {
 }
 
 .profile.float-right {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .profile.float-left {
@@ -224,6 +224,15 @@ ul.task-list input[type="checkbox"] {
         display: block;
       }
     }
+
+    .float-right {
+      margin-left: 2rem;
+    }
+
+    float-left {
+      margin-right: 2rem;
+    }
+    
   }
 }
 
@@ -692,6 +701,7 @@ footer.sticky-bottom {
       margin-bottom: 1rem;
 
       .preview {
+        // empty rule
       }
 
       .abbr {
@@ -1357,7 +1367,6 @@ ninja-keys::part(ninja-input-wrapper) {
   text-align-last: end;
 }
 
-// use only lowercase test for example for footer override
 .text-lower-case {
   text-transform: lowercase;
 }
@@ -1367,4 +1376,17 @@ ninja-keys::part(ninja-input-wrapper) {
   font-size: 85%;
   line-height: 0;
   vertical-align: baseline;
+}
+
+
+// home/main page about header alignment
+.about-header {
+  text-align: center;
+}
+
+// -> desktop variation of the above
+@media (min-width: 700px) {
+  .about-header {
+    text-align: left;
+  }
 }
