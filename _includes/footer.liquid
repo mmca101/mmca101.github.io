@@ -1,6 +1,10 @@
 {% if site.footer_fixed %}
   <footer class="fixed-bottom" role="contentinfo">
+    {% if page.url == "/" %}
+    <div class="container mt-0" style="margin-top:24px!important;">
+    {% else %}
     <div class="container mt-0">
+    {% endif %}
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
       {{ site.middle_name }}
@@ -14,8 +18,12 @@
     </div>
   </footer>
 {% else %}
-  <footer class="sticky-bottom mt-5" role="contentinfo">
-    {% if site.newsletter.enabled %}
+  {% if page.url == "/" %}
+  <footer class="sticky-bottom mt-5" role="contentinfo" style="margin-top:24px!important;">
+  {% else %}
+  <footer class="sticky-bottom mt-5" role="contentinfo" >
+  {% endif %}
+  {% if site.newsletter.enabled %}
       {% include scripts/newsletter.liquid %}
     {% endif %}
 
