@@ -3,6 +3,7 @@ layout: default
 ---
 <div class="post">
   <header class="post-header">
+  {% comment %}
     <h1 class="post-title">
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
@@ -11,10 +12,12 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+  {% endcomment %}
+    <h2 class="desc" style="margin-bottom: 16px;">{{ page.subtitle }}<br>{{ page.subtitle_line_2 }}</h2>
   </header>
 
   <article>
+
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
@@ -38,7 +41,7 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="text-justify-last-left clearfix">{{ content }}</div>
+    <div class="clearfix text-justify-last-left">{{ content }}</div>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}

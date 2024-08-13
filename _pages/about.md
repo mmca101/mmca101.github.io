@@ -3,7 +3,8 @@ layout: about
 title: welcome
 nav_title: welcome here
 permalink: /
-subtitle: reframe our relationship with technology
+subtitle: reframe your relationship
+subtitle_line_2: with technology
 
 profile:
   align: right

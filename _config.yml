@@ -6,7 +6,7 @@ title: frameworks # the website title (if blank, full name will be used instead)
 first_name: Michael
 middle_name: MC
 last_name: Altrock
-email: michael@altrock.im
+email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A starting point of the journey to a healthy relationship with technology.
 footer_text: # text displayed in the footer
