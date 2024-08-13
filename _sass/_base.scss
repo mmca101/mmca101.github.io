@@ -1325,3 +1325,34 @@ ninja-keys::part(ninja-input-wrapper) {
     padding-top: 10px!important;
     padding-bottom: 6px!important;
 }
+
+.text-justify {
+  text-align: justify !important;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+}
+
+.text-justify-last {
+  text-align: justify !important;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+  text-align-last: center;
+}
+
+.text-justify-last-left {
+  text-align: justify !important;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+  text-align-last: start;
+}
+
+.text-justify-last-right {
+  text-align: justify !important;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+  text-align-last: end;
+}
