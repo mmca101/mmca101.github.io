@@ -1389,3 +1389,13 @@ ninja-keys::part(ninja-input-wrapper) {
     text-align: left;
   }
 }
+
+@media (max-width: 699px) {
+  .footer-display {
+    display: none;
+  }
+}
+
+.modal {
+  background: rgb(255 252 252 / 87%);
+}
