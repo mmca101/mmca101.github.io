@@ -7,8 +7,8 @@ search_visibility: false
 description: How I'm exploring new skills
 nav: true
 nav_order: 2
-display_categories: #[work, fun]
-horizontal: true
+display_categories: [current, past]
+horizontal: false
 ---
 
 <!-- pages/projects.md -->
