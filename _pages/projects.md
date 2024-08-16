@@ -3,6 +3,7 @@ layout: page
 title: projects
 nav_title: projects
 permalink: /projects/
+search_visibility: false
 description: How I'm exploring new skills
 nav: true
 nav_order: 2

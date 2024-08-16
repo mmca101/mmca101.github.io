@@ -3,6 +3,7 @@ layout: page
 permalink: /credits/
 title: credits
 nav_title: credits
+search_visibility: false
 description: This page was made possible by these people & resources your description.
 nav: false
 nav_order: 6

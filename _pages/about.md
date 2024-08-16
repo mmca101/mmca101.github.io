@@ -2,6 +2,7 @@
 layout: about
 title: welcome
 nav_title: welcome here
+search_visibility: false
 permalink: /
 subtitle: reframe your relationship
 subtitle_line_2: with technology

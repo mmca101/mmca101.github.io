@@ -3,6 +3,7 @@ layout: profiles
 permalink: /team/
 title: team
 nav_title: news
+search_visibility: false
 description: crew and collaborators
 nav: false
 nav_order: 7
