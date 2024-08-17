@@ -9,15 +9,15 @@ last_name: Altrock
 email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A starting point of the journey to a healthy relationship with technology.
-footer_text: # text displayed in the footer
-keywords: jekyll, jekyll-theme, personal-website, portfolio-website # add your own keywords or leave empty
+footer_text: HELLO WORLD # text displayed in the footer
+keywords: framework, reframe your relationship with technology, portfolio, static html, jekyll # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: yyf-icon.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://frameworks.live/ # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
-last_updated: false # set to true if you want to display last updated in the footer
-impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
+last_updated: true # set to true if you want to display last updated in the footer
+impressum_path: /imprint/ # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
 
 # -----------------------------------------------------------------------------
@@ -28,7 +28,7 @@ back_to_top: true # set to false to disable the back to top button
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_trophies:
-  enabled: true
+  enabled: false
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 
@@ -130,15 +130,15 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 blog_name: frameworks # blog_name will be displayed in your blog page
 blog_description: reframe your relationship with technology # blog_description will be displayed in your blog page
 permalink: /blog/:year/:title/
-lsi: false # produce an index for related posts
+lsi: true # produce an index for related posts
 
 # Pagination
 pagination:
   enabled: true
 
 related_blog_posts:
-  enabled: false
-  max_related: 5
+  enabled: true
+  max_related: 3
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
@@ -187,19 +187,19 @@ collections:
   news:
     defaults:
       layout: post
-    output: false
+    output: true
     permalink: /:collection/:title/
   projects:
     output: true
     permalink: /:collection/:title/
 
 announcements:
-  enabled: false
+  enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 3 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: false
+  enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
