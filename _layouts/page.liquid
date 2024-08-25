@@ -38,17 +38,19 @@ layout: default
   
   {% if page.post_tags %}
     <h2>{{ page.posts_title | default: "Related Posts" }}</h2>
-    <ul>
       {% assign post_count = page.post_count | default: 3 %}
       {% assign relevant_posts = site.posts | where: "tags", page.post_tags %}
       {% for post in relevant_posts limit: post_count %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <p>{{ post.excerpt }}</p>
-        </li>
+        <table class="related-posts-table">
+          <tr>
+            <td>
+              <p><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <br>{{ post.excerpt | strip_html }}</p>
+            </td>
+          </tr>
+        </table>
       {% endfor %}
-    </ul>
-    <a href="{{ '/blog/tag/' | append: page.post_tags | relative_url }}">Show all related posts.</a>
+    <a href="{{ '/blog/tag/' | append: page.post_tags | relative_url }}">show all related posts</a>
   {% endif %}
 
   {% if site.giscus and page.giscus_comments %}
