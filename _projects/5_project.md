@@ -5,6 +5,15 @@ description: a project with a background image
 img: assets/img/1.jpg
 importance: 3
 category: past
+giscus_comments:
+# relevant announcements / news
+news_tags: 
+news_count: 
+news_title: 
+# relevant posts / pages
+post_tags: 
+post_count: 
+posts_title: 
 ---
 
 Every project has a beautiful feature showcase page.

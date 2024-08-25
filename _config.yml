@@ -7,7 +7,7 @@ first_name: Michael
 middle_name: MC
 last_name: Altrock
 email: 
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
+description: # the ">" symbol means to ignore newlines until "footer_text:"
   A starting point of the journey to a healthy relationship with technology.
 footer_text: # text displayed in the footer
 keywords: framework, reframe your relationship with technology, portfolio, static html, jekyll # add your own keywords or leave empty
@@ -198,7 +198,7 @@ collections:
   announcements:
     enabled: true
     scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-    limit: 3 # leave blank to include all the news in the `_news` folder
+    limit: # leave blank to include all the news in the `_news` folder
 
   latest_posts:
     enabled: true
@@ -364,13 +364,13 @@ enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
-enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
+enable_tooltips: true # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
-enable_project_categories: true # enables categorization of projects into multiple categories
+enable_project_categories: false # enables categorization of projects into multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
-enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
+enable_video_embedding: true # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
 
 # -----------------------------------------------------------------------------
 # Library versions

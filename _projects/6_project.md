@@ -5,6 +5,15 @@ description: a project with no image
 img:
 importance: 4
 category: past
+giscus_comments:
+# relevant announcements / news
+news_tags: 
+news_count: 
+news_title: 
+# relevant posts / pages
+post_tags: 
+post_count: 
+posts_title: 
 ---
 
 Every project has a beautiful feature showcase page.

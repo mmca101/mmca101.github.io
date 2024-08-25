@@ -28,16 +28,17 @@
     {% endif %}
 
     <div class="container text-lower-case">
-      <text class="text-sub-like">&copy;</text> Copyright <text class="text-sub-like">{{ site.time | date: '%Y' }}</text>
       {{ site.first_name }}
       {{ site.middle_name }}
       {{ site.last_name }}
       {{ site.footer_text }}
-      {% if site.impressum_path %}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-      {% endif %}
+      <text class="text-sub-like">&copy;</text> <text class="text-sub-like">{{ site.time | date: '%Y' }}</text>
       {% if site.last_updated %}
-        Last updated: {{ 'now' | date: '%B %d, %Y' }}
+        <br>
+        <text class="text-sub-like">last updated {{ 'now' | date: '%d.%m.%y' }}</text>
+      {% endif %}
+      {% if site.impressum_path %}
+        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}" class="text-sub-like">(imprint)</a>
       {% endif %}
     </div>
   </footer>

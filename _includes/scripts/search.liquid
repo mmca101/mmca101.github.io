@@ -79,6 +79,19 @@
         {%- endif -%}
       {%- endfor -%}
 
+      {%- for item in site.faq -%}
+        {
+          {%- assign title = item.title | escape | strip -%}
+          id: "faq-{{ title | slugify }}",
+          title: "{{ title | truncatewords: 10, '...' }}",
+          description: "{{ item.content | strip_html | strip_newlines | escape | strip }}",
+          section: "FAQ",
+          handler: () => {
+            window.location.href = "{{ item.url | relative_url }}";
+          },
+        },
+      {%- endfor -%}
+
       {%- if site.socials_in_search -%}
         {%- if site.email -%}
           {

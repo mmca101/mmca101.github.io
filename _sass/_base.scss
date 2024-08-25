@@ -236,7 +236,7 @@ ul.task-list input[type="checkbox"] {
 }
 
 .post-description {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-size: 0.875rem;
 
   a {
@@ -466,8 +466,8 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 39px;
+  padding-bottom: 41px;
   font-size: 0.9rem;
 
   .container {
@@ -1372,7 +1372,7 @@ ninja-keys::part(ninja-input-wrapper) {
 
 .text-sub-like {
   position: relative;
-  font-size: 85%;
+  font-size: 87.5%;
   line-height: 0;
   vertical-align: baseline;
 }
@@ -1398,4 +1398,26 @@ ninja-keys::part(ninja-input-wrapper) {
 
 .modal {
   background: rgb(255 252 252 / 87%);
+}
+
+// additional styling for post block elements to ensure consistent spacing
+// currently only used in related posts on projects pages
+.default-post-styling {
+  margin-inline-end: 2em;
+  margin-block-end: 2em;
+  margin-bottom: 2em;
+}
+
+table.table-sm th,table.table-sm td {
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+}
+
+.table-inline-news {
+  margin-bottom: 2rem;
+}
+
+.custom-article-styling {
+  margin-block-end: 2rem;
+  margin-bottom: 2rem;
 }
