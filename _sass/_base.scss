@@ -1402,19 +1402,25 @@ ninja-keys::part(ninja-input-wrapper) {
 
 // additional styling for post block elements to ensure consistent spacing
 // currently only used in related posts on projects pages
-.default-post-styling {
+.post-content {
   margin-inline-end: 0!important;
   margin-block-end: 2em;
   margin-bottom: 2em;
 }
+
 .table.table-inline-news td {
   padding-top: .1rem;
   padding-bottom: .1rem;
   width: 100%;
 }
 
-.table-inline-news {
+.post-markers {
+  
   margin-bottom: 2rem;
+
+  .table {
+    margin-bottom: 0;
+  }
 
 }
 
@@ -1425,4 +1431,16 @@ ninja-keys::part(ninja-input-wrapper) {
 
 .related-posts-table {
   padding-inline-start: 0!important;
+}
+
+.post h3 {
+  font-size: 1.5rem;
+}
+
+.post h2 {
+  font-size: 1.75rem;
+}
+
+.card-text {
+  margin-block-end: 0.125em!important;
 }

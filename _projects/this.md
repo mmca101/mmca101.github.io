@@ -1,8 +1,9 @@
 ---
 layout: page
-title: project 8
-description: an other project with a background image and giscus comments
-img: assets/img/9.jpg
+title: frameworks
+status:
+description: this page
+img:
 importance: 2
 category: past
 giscus_comments:

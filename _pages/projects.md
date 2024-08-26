@@ -8,7 +8,7 @@ description: How I'm exploring new skills
 nav: true
 nav_order: 2
 display_categories: [current, past]
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
@@ -20,7 +20,8 @@ horizontal: false
     <h2 class="category">{{ category }}</h2>
   </a>
   {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
+  {% assign non_draft_projects = categorized_projects | where_exp: "project", "project.status != 'draft'" %}
+  {% assign sorted_projects = non_draft_projects | sort: "importance" %}
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
   <div class="container">
@@ -43,8 +44,8 @@ horizontal: false
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
+{% assign non_draft_projects = site.projects | where_exp: "project", "project.status != 'draft'" %}
+{% assign sorted_projects = non_draft_projects | sort: "importance" %}
   <!-- Generate cards for each project -->
 
 {% if page.horizontal %}

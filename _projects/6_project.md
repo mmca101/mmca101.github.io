@@ -1,6 +1,7 @@
 ---
 layout: page
 title: project 6
+status: draft
 description: a project with no image
 img:
 importance: 4

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ATMOSFIRE
+status: draft
 description: atmospheric fire performance and event collective from berlin
 img: assets/img/atmosfire.jpg
 redirect: https://atmosfire.space

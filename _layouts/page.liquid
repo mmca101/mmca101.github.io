@@ -9,8 +9,8 @@ layout: default
   </header>
     
   {% if page.news_tags %}
-    <div class="news">
-      <h2>{{ page.news_title | default: "Related Announcements" }}</h2>
+    <div class="post-markers">
+      <h3>{{ page.news_title | default: "Related Announcements" }}</h3>
       {% assign news_count = page.news_count | default: 1 %}
       {% assign relevant_news = site.news | where: "tags", page.news_tags %}
       <div class="table-responsive">
@@ -31,13 +31,15 @@ layout: default
     </div>
   {% endif %}
 
-  <div class="default-post-styling ">
+  <div class="post-content">
     <article class="custom-article-styling">
       {{ content }}
     </article>
+    </div>
   
   {% if page.post_tags %}
-    <h2>{{ page.posts_title | default: "Related Posts" }}</h2>
+  <div class="post-references">
+    <h3>{{ page.posts_title | default: "Related Posts" }}</h3>
       {% assign post_count = page.post_count | default: 3 %}
       {% assign relevant_posts = site.posts | where: "tags", page.post_tags %}
       {% for post in relevant_posts limit: post_count %}
@@ -51,10 +53,13 @@ layout: default
         </table>
       {% endfor %}
     <a href="{{ '/blog/tag/' | append: page.post_tags | relative_url }}">show all related posts</a>
+  </div>
   {% endif %}
 
   {% if site.giscus and page.giscus_comments %}
+  <div class="post-comments">
     {% include giscus.liquid %}
+  </div>
   {% endif %}
 
 </div>

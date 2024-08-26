@@ -1,6 +1,7 @@
 ---
 layout: page
 title: LILA LOVES IT
+status: draft
 description: a high quality natural dog grooming and foods online shop
 img: assets/img/lila-loves-it.jpg
 redirect: https://lila-loves-it.com
