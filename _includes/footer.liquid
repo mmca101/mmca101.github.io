@@ -33,12 +33,14 @@
       {{ site.last_name }}
       {{ site.footer_text }}
       <text class="text-sub-like">&copy;</text> <text class="text-sub-like">{{ site.time | date: '%Y' }}</text>
-      {% if site.last_updated %}
+      {% if site.impressum_path or site.last_updated %}
         <br>
-        <text class="text-sub-like">last updated {{ 'now' | date: '%d.%m.%y' }}</text>
       {% endif %}
       {% if site.impressum_path %}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}" class="text-sub-like">(imprint)</a>
+        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}" class="text-sub-like">imprint</a>
+      {% endif %}
+      {% if site.last_updated %}
+        <text class="text-sub-like">(last updated {{ 'now' | date: '%d.%m.%y' }})</text>
       {% endif %}
     </div>
   </footer>
