@@ -27,7 +27,8 @@
 
         <div class="navbar-nav ml-auto">
           {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign nav_title = page.title %} {% endif %}
+            {% if page.permalink == '/' %} {% assign nav_title = page.title %}
+            {% endif %}
           {% endfor %}
 
           {% comment %} <!-- About -->
