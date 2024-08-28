@@ -1446,26 +1446,6 @@ ninja-keys::part(ninja-input-wrapper) {
   margin-block-end: 0.125em!important;
 }
 
-.container[role="main"] {
-  padding-left: 31px;
-  padding-right: 31px;
-}
-
-.navbar > .container {
-  padding-left: 31px;
-  padding-right: 31px;
-}
-
-nav[data-toggle=toc] > .nav-link {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.navbar[role="navigation"] {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 @media (max-width: 699px) {
 
   .col-sm-9 {
@@ -1488,4 +1468,44 @@ nav[data-toggle=toc] > .nav-link {
     padding-right: 0px;
     padding-left: 0px;
   }
+}
+
+// adjust side padding for mobile and desktop devices
+
+nav[data-toggle=toc] > .nav-link {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navbar[role="navigation"] {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (max-width: 499px) {
+
+  .container[role="main"] {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .navbar > .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+}
+
+@media (min-width: 500px) {
+
+  .container[role="main"] {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  
+  .navbar > .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
 }
