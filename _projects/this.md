@@ -8,7 +8,7 @@ importance: 2
 category: past
 giscus_comments:
 toc:
-  sidebar: left
+  sidebar: right
 # relevant announcements / news
 news_tags: formatting
 news_count: 3

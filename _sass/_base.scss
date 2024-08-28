@@ -215,7 +215,7 @@ ul.task-list input[type="checkbox"] {
   margin-right: 1.25rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .profile.float-right {
     margin-left: 2rem;
   }
@@ -1061,7 +1061,7 @@ nav[data-toggle="toc"] {
 }
 
 /* small screens */
-@media (max-width: 576px) {
+@media (max-width: 699px) {
   /* override stickyness so that the navigation does not follow scrolling */
   nav[data-toggle="toc"] {
     visibility: hidden;
@@ -1255,7 +1255,7 @@ ninja-keys::part(ninja-input-wrapper) {
   cursor: pointer;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 699px) {
   .newsletter-form-input,
   .newsletter-form-button,
   .newsletter-loading-button,
@@ -1323,6 +1323,7 @@ ninja-keys::part(ninja-input-wrapper) {
 .navbar-nav {
   display: flex;
   flex-direction: row;
+  flex: 0 1 auto;
 }
 
 // add extra padding to nav-items
@@ -1384,13 +1385,13 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 // -> desktop variation of the above
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .about-header {
     text-align: left;
   }
 }
 
-@media (max-width: 699px) {
+@media (max-width: 899px) {
   .footer-display {
     display: none;
   }
@@ -1443,4 +1444,48 @@ ninja-keys::part(ninja-input-wrapper) {
 
 .card-text {
   margin-block-end: 0.125em!important;
+}
+
+.container[role="main"] {
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+.navbar > .container {
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+nav[data-toggle=toc] > .nav-link {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navbar[role="navigation"] {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (max-width: 699px) {
+
+  .col-sm-9 {
+      flex: 0 0 100%!important;
+      max-width: 100%!important;
+  }
+  
+}
+
+@media (min-width: 700px) {
+
+  .col-sm-9 {
+    flex: 0 0 80%!important;
+    max-width: 80%!important;
+  }
+
+  .col-sm-3 {
+    flex: 0 0 20%!important;
+    max-width: 20%!important;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
