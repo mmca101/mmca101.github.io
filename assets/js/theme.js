@@ -230,13 +230,13 @@ let determineComputedTheme = () => {
     return themeSetting;
   }
 };
-
 let initTheme = () => {
   let themeSetting = determineThemeSetting();
 
+  // Apply the theme immediately
   setThemeSetting(themeSetting);
 
-  // Add event listener to the theme toggle button.
+  // Add event listener to the theme toggle button after the DOM is fully loaded.
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
 
@@ -250,3 +250,6 @@ let initTheme = () => {
     applyTheme();
   });
 };
+
+// Immediately apply the theme when the script runs
+initTheme();
