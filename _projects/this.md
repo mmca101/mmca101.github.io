@@ -1,6 +1,7 @@
 ---
 layout: page
 title: frameworks
+permalink: /this/
 status:
 description: this page
 img:

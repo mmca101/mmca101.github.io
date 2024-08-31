@@ -44,6 +44,7 @@ rss_icon: false
 # Layout
 # -----------------------------------------------------------------------------
 
+this_mode: true # THIS mode, only shows one page link in header named THIS for simplyfied one project lamnding pages
 navbar_fixed: true
 footer_fixed: false
 search_enabled: true
