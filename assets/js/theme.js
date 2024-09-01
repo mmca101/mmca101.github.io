@@ -83,25 +83,16 @@ let applyTheme = () => {
   }
 };
 
-// Function to set the highlight theme
 let setHighlight = (theme) => {
-  let lightThemeElement = document.getElementById("highlight_theme_light");
-  let darkThemeElement = document.getElementById("highlight_theme_dark");
-
-  if (lightThemeElement) {
-    lightThemeElement.media = (theme === "dark") ? "none" : "";
+  if (theme == "dark") {
+    document.getElementById("highlight_theme_light").media = "none";
+    document.getElementById("highlight_theme_dark").media = "";
   } else {
-    console.error("Element with ID 'highlight_theme_light' not found");
-  }
-
-  if (darkThemeElement) {
-    darkThemeElement.media = (theme === "dark") ? "" : "none";
-  } else {
-    console.error("Element with ID 'highlight_theme_dark' not found");
+    document.getElementById("highlight_theme_dark").media = "none";
+    document.getElementById("highlight_theme_light").media = "";
   }
 };
 
-// Function to set the Giscus theme
 let setGiscusTheme = (theme) => {
   function sendMessage(message) {
     const iframe = document.querySelector("iframe.giscus-frame");
@@ -115,25 +106,6 @@ let setGiscusTheme = (theme) => {
     },
   });
 };
-
-// Initialize theme on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", function() {
-  const initialTheme = "dark"; // or "light"
-  setHighlight(initialTheme);
-
-  // Add event listener to the theme selector button
-  const themeToggleButton = document.getElementById("theme-toggle-button");
-  if (themeToggleButton) {
-    themeToggleButton.addEventListener("click", function() {
-      const currentTheme = (document.getElementById("highlight_theme_dark").media === "none") ? "light" : "dark";
-      const newTheme = (currentTheme === "dark") ? "light" : "dark";
-      setHighlight(newTheme);
-      setGiscusTheme(newTheme);
-    });
-  } else {
-    console.error("Element with ID 'theme-toggle-button' not found");
-  }
-});
 
 let addMermaidZoom = (records, observer) => {
   var svgs = d3.selectAll(".mermaid svg");
@@ -258,13 +230,13 @@ let determineComputedTheme = () => {
     return themeSetting;
   }
 };
+
 let initTheme = () => {
   let themeSetting = determineThemeSetting();
 
-  // Apply the theme immediately
   setThemeSetting(themeSetting);
 
-  // Add event listener to the theme toggle button after the DOM is fully loaded.
+  // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
 
@@ -278,6 +250,3 @@ let initTheme = () => {
     applyTheme();
   });
 };
-
-// Immediately apply the theme when the script runs
-initTheme();

@@ -1,3 +1,14 @@
+  <!-- Initial dark background to avoid flicker -->
+  <style>
+    body {
+      background-color: #121212; /* Dark background color */
+      color: #ffffff; /* Optional: Light text color for better contrast */
+    }
+    table, th, td {
+    color: #ffffff; /* Light text color for table elements */
+  }
+  </style>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
@@ -29,9 +40,6 @@
   type="text/css"
   href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
 >
-
-<!-- Preload main.css -->
-<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" crossorigin="anonymous">
 
 <!-- Preload Relevant Font -->
 <link rel="preload" href="{{ '/assets/fonts/tabler-icons-outline.woff2?v3.0.1' | relative_url }}" as="font" type="font/woff2" crossorigin="anonymous">
