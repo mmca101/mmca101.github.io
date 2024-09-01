@@ -30,11 +30,11 @@
   href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
 >
 
-<!-- Preloads -->
+<!-- Preload main.css -->
 <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" crossorigin="anonymous">
+
+<!-- Preload Relevant Font -->
 <link rel="preload" href="{{ '/assets/fonts/tabler-icons-outline.woff2?v3.0.1' | relative_url }}" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ '/assets/js/theme.js' | relative_url }}" as="script" crossorigin="anonymous">
-<link rel="preload" href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url }}" as="style" crossorigin="anonymous">
 
 <!-- Code Syntax Highlighting -->
 <link
@@ -74,51 +74,8 @@
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-<!-- Applying theme as early as possible -->
-
-<script>
-  (function() {
-    // Determine the expected state of the theme toggle, which can be "dark", "light", or "system". Default is "system".
-    let determineThemeSetting = () => {
-      let themeSetting = localStorage.getItem("theme");
-      if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-        themeSetting = "system";
-      }
-      return themeSetting;
-    };
-
-    // Determine the computed theme, which can be "dark" or "light". If the theme setting is "system", the computed theme is determined based on the user's system preference.
-    let determineComputedTheme = () => {
-      let themeSetting = determineThemeSetting();
-      if (themeSetting == "system") {
-        const userPref = window.matchMedia;
-        if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
-          return "dark";
-        } else {
-          return "light";
-        }
-      } else {
-        return themeSetting;
-      }
-    };
-
-    // Apply the computed dark or light theme to the website.
-    let applyTheme = () => {
-      let theme = determineComputedTheme();
-      document.documentElement.setAttribute("data-theme", theme);
-    };
-
-    // Apply the theme immediately
-    applyTheme();
-
-    // Add event listener to the system theme preference change.
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
-      applyTheme();
-    });
-  })();
-</script>
-
-<!-- Dark mode -->
+<!-- Dark Mode -->
+<script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
 {% if site.enable_darkmode %}
   <link
     defer
@@ -128,7 +85,7 @@
     id="highlight_theme_dark"
   >
   <script>
-    document.getElementById('highlight_theme_dark').media = 'all';
+    initTheme();
   </script>
 {% endif %}
 

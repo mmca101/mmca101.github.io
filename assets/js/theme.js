@@ -1,3 +1,5 @@
+// Has to be in the head tag, otherwise a flicker effect will occur.
+
 // Toggle through light, dark, and system theme settings.
 let toggleThemeSetting = () => {
   let themeSetting = determineThemeSetting();
@@ -13,13 +15,16 @@ let toggleThemeSetting = () => {
 // Change the theme setting and apply the theme.
 let setThemeSetting = (themeSetting) => {
   localStorage.setItem("theme", themeSetting);
+
   document.documentElement.setAttribute("data-theme-setting", themeSetting);
+
   applyTheme();
 };
 
 // Apply the computed dark or light theme to the website.
 let applyTheme = () => {
   let theme = determineComputedTheme();
+
   transTheme();
   setHighlight(theme);
   setGiscusTheme(theme);
@@ -73,7 +78,7 @@ let applyTheme = () => {
   // Updates the background of medium-zoom overlay.
   if (typeof medium_zoom !== "undefined") {
     medium_zoom.update({
-      background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for transparency.
+      background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
     });
   }
 };
@@ -228,7 +233,8 @@ let transTheme = () => {
   }, 500);
 };
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or "system". Default is "system".
+// Determine the expected state of the theme toggle, which can be "dark", "light", or
+// "system". Default is "system".
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
   if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
@@ -237,7 +243,8 @@ let determineThemeSetting = () => {
   return themeSetting;
 };
 
-// Determine the computed theme, which can be "dark" or "light". If the theme setting is "system", the computed theme is determined based on the user's system preference.
+// Determine the computed theme, which can be "dark" or "light". If the theme setting is
+// "system", the computed theme is determined based on the user's system preference.
 let determineComputedTheme = () => {
   let themeSetting = determineThemeSetting();
   if (themeSetting == "system") {
@@ -251,19 +258,26 @@ let determineComputedTheme = () => {
     return themeSetting;
   }
 };
+let initTheme = () => {
+  let themeSetting = determineThemeSetting();
 
-// Initialize theme on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", function() {
-  const initialTheme = determineComputedTheme();
-  setHighlight(initialTheme);
+  // Apply the theme immediately
+  setThemeSetting(themeSetting);
 
-  // Add event listener to the theme selector button
-  const themeToggleButton = document.getElementById("theme-toggle-button");
-  if (themeToggleButton) {
-    themeToggleButton.addEventListener("click", function() {
+  // Add event listener to the theme toggle button after the DOM is fully loaded.
+  document.addEventListener("DOMContentLoaded", function () {
+    const mode_toggle = document.getElementById("light-toggle");
+
+    mode_toggle.addEventListener("click", function () {
       toggleThemeSetting();
     });
-  } else {
-    console.error("Element with ID 'theme-toggle-button' not found");
-  }
-});
+  });
+
+  // Add event listener to the system theme preference change.
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+    applyTheme();
+  });
+};
+
+// Immediately apply the theme when the script runs
+initTheme();
