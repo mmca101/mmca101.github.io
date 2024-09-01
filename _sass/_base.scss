@@ -873,7 +873,8 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: all 750ms !important;
+  /* Transition text color and other properties first */
+  transition: color 1000ms ease-in-out 0s, background-color 1000ms ease-in-out 100ms !important;
   transition-delay: 0 !important;
 }
 

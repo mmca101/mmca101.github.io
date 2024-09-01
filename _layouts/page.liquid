@@ -13,21 +13,19 @@ layout: default
       <h3>{{ page.news_title | default: "Related Announcements" }}</h3>
       {% assign news_count = page.news_count | default: 1 %}
       {% assign relevant_news = site.news | where: "tags", page.news_tags %}
-      <div class="table-responsive">
-        <table class="table table-sm table-borderless table-inline-news">
-          {% for item in relevant_news limit: news_count %}
+      {% for item in relevant_news limit: news_count %}
+        <table class="table-inline-news">
             <tr>
               <td>
                 {% if item.inline %}
-                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                  {{ item.content | strip_html  }}
                 {% else %}
                   <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                 {% endif %}
               </td>
             </tr>
-          {% endfor %}
         </table>
-      </div>
+      {% endfor %}
     </div>
   {% endif %}
 
