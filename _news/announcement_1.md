@@ -8,4 +8,4 @@ tags: formatting
 highlight:
 ---
 
-A simple inline announcement.
+Don't compromise on your environment.
