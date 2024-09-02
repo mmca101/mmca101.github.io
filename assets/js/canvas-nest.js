@@ -7,8 +7,8 @@ this.randomPoints=function(){
         return {
             x: centerX + (Math.random() - 0.5) * o.canvas.width,
             y: centerY + (Math.random() - 0.5) * o.canvas.height,
-            xa: (2 * Math.random() - 1) / 2, // Halve the x velocity
-            ya: (2 * Math.random() - 1) / 2, // Halve the y velocity
+            xa: (2 * Math.random() - 1) / 3, // Halve the x velocity
+            ya: (2 * Math.random() - 1) / 3, // Halve the y velocity
             max: 6e3
         }
     })
