@@ -19,6 +19,7 @@ baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: /imprint/ # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
+future: true # set to true to enable future post times to be shown
 
 # -----------------------------------------------------------------------------
 # Theme
@@ -50,6 +51,7 @@ footer_fixed: false
 search_enabled: true
 socials_in_search: false
 bib_search: false
+dark_mode_search_toggle: false
 
 # Dimensions
 max_width: 900px
@@ -316,7 +318,7 @@ jekyll-archives:
     tag: archive-tag
     category: archive-category
   permalinks:
-    year: "/blog/:year/"
+    year: "/articles/:year/"
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 

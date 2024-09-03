@@ -1,5 +1,7 @@
 ---
 layout: post
+status: draft
+search_visibility: false
 title: a post with geojson
 date: 2024-01-26 17:57:00
 description: this is what included geojson code could look like

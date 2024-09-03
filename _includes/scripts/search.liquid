@@ -30,7 +30,7 @@
       {%- for collection in site.collections -%}
         {%- if collection.label == 'projects' -%}
           {%- for item in collection.docs -%}
-            {%- if item.visible != false -%}
+            {%- if item.status != 'draft' and item.search_visibility != false -%}
               {
                 {%- if item.inline -%}
                   {%- assign title = item.content | newline_to_br | replace: "<br />", " " | replace: "<br/>", " " | strip_html | strip_newlines | escape | strip -%}
@@ -40,7 +40,7 @@
                 id: "{{ collection.label }}-{{ title | slugify }}",
                 title: '{{ title | emojify | truncatewords: 10, "..." }}',
                 description: "{{ item.description | strip_html | strip_newlines | escape | strip }}",
-                section: "{{ collection.label | capitalize }}",
+                section: "mains",
                 {%- unless item.inline -%}
                   handler: () => {
                     window.location.href = "{{ item.url | relative_url }}";
@@ -51,9 +51,9 @@
           {%- endfor -%}
         {%- endif -%}
       {%- endfor -%}
-      
+
       {%- for post in site.posts -%}
-        {%- if post.search_visibility != false -%}
+        {%- if post.status != 'draft' and post.search_visibility != false -%}
           {
             {%- assign title = post.title | escape | strip -%}
             id: "post-{{ title | slugify }}",
@@ -65,7 +65,7 @@
               title: "{{ title | truncatewords: 10, '...' }}",
             {% endif %}
             description: "{{ post.description | strip_html | strip_newlines | escape | strip }}",
-            section: "Posts",
+            section: "articles",
             handler: () => {
               {% if post.redirect == blank %}
                 window.location.href = "{{ post.url | relative_url }}";
@@ -80,16 +80,18 @@
       {%- endfor -%}
 
       {%- for item in site.faq -%}
-        {
-          {%- assign title = item.title | escape | strip -%}
-          id: "faq-{{ title | slugify }}",
-          title: "{{ title | truncatewords: 10, '...' }}",
-          description: "{{ item.content | strip_html | strip_newlines | escape | strip }}",
-          section: "FAQ",
-          handler: () => {
-            window.location.href = "{{ item.url | relative_url }}";
+        {%- if item.status != 'draft' and item.search_visibility != false  -%}
+          {
+            {%- assign title = item.title | escape | strip -%}
+            id: "faq-{{ title | slugify }}",
+            title: "{{ title | truncatewords: 10, '...' }}",
+            description: "{{ item.content | strip_html | strip_newlines | escape | strip }}",
+            section: "questions",
+            handler: () => {
+              window.location.href = "{{ item.url | relative_url }}";
+            },
           },
-        },
+        {%- endif -%}
       {%- endfor -%}
 
       {%- if site.socials_in_search -%}
@@ -518,36 +520,37 @@
         {%- endif -%}
         {%- endcomment -%}
       {%- endif -%}
-      {%- if site.enable_darkmode -%}
-        {
-          id: 'light-theme',
-          title: 'Change theme to light',
-          description: 'Change the theme of the site to Light',
-          section: 'Theme',
-          handler: () => {
-            setThemeSetting("light");
-          },
-        },
-        {
-          id: 'dark-theme',
-          title: 'Change theme to dark',
-          description: 'Change the theme of the site to Dark',
-          section: 'Theme',
-          handler: () => {
-            setThemeSetting("dark");
-          },
-        },
-        {
-          id: 'system-theme',
-          title: 'Use system default theme',
-          description: 'Change the theme of the site to System Default',
-          section: 'Theme',
-          handler: () => {
-            setThemeSetting("system");
-          },
-        },
+            {%- if site.enable_darkmode and site.dark_mode_search_toggle -%}
+              {
+                id: 'light-theme',
+                title: 'Change theme to light',
+                description: 'Change the theme of the site to Light',
+                section: 'Theme',
+                handler: () => {
+                  setThemeSetting("light");
+                },
+              },
+              {
+                id: 'dark-theme',
+                title: 'Change theme to dark',
+                description: 'Change the theme of the site to Dark',
+                section: 'Theme',
+                handler: () => {
+                  setThemeSetting("dark");
+                },
+              },
+              {
+                id: 'system-theme',
+                title: 'Use system default theme',
+                description: 'Change the theme of the site to System Default',
+                section: 'Theme',
+                handler: () => {
+                  setThemeSetting("system");
+                },
+              },
       {%- endif -%}
     ];
+
   </script>
   <script src="{{ '/assets/js/shortcut-key.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}

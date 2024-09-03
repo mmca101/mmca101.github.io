@@ -2,7 +2,8 @@
 layout: page
 title: get started
 permalink: /get-started/
-status:
+status: published
+search_visibility: true
 description:
 img:
 importance: 1
@@ -15,9 +16,9 @@ news_tags: core
 news_count: 3
 news_title: Core Values & Principles
 # relevant posts / pages
-post_tags: get-started
-post_count: 3
-posts_title: What to read first
+post_tags:
+post_count:
+posts_title:
 ---
 
 <div class="profile float-right">
