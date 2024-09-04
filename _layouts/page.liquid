@@ -2,23 +2,63 @@
 layout: default
 ---
 <div class="post">
+
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 class="post-title" data-toc-skip>{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>
   </header>
-
-  <article>
-    {{ content }}
-  </article>
-
-  {% if page.related_publications %}
-    <h2>References</h2>
-    <div class="publications">
-      {% bibliography --cited_in_order %}
+    
+  {% if page.news_tags %}
+    <div class="post-markers">
+      <h3>{{ page.news_title | default: "Related Announcements" }}</h3>
+      {% assign news_count = page.news_count | default: 1 %}
+      {% assign relevant_news = site.news | where: "tags", page.news_tags %}
+      {% for item in relevant_news limit: news_count %}
+        <table class="table-inline-news">
+            <tr>
+              <td>
+                {% if item.inline %}
+                  {{ item.content | strip_html  }}
+                {% else %}
+                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+              </td>
+            </tr>
+        </table>
+      {% endfor %}
     </div>
   {% endif %}
 
-  {% if site.giscus and page.giscus_comments %}
-    {% include giscus.liquid %}
+  <div class="post-content">
+    <article class="custom-article-styling">
+      <div id="toc"></div>
+      {{ content }}
+    </article>
+  </div>
+  
+  {% if page.post_tags %}
+  <div class="post-references">
+    <h3>{{ page.posts_title | default: "Related Posts" }}</h3>
+      {% assign post_count = page.post_count | default: 3 %}
+      {% assign relevant_posts = site.posts | where: "tags", page.post_tags %}
+      {% for post in relevant_posts limit: post_count %}
+        <table class="related-posts-table">
+          <tr>
+            <td>
+              <p><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <br>{{ post.excerpt | strip_html }}</p>
+            </td>
+          </tr>
+        </table>
+      {% endfor %}
+    <a href="{{ '/blog/tag/' | append: page.post_tags | relative_url }}">show all related posts</a>
+  </div>
   {% endif %}
+
+  {% if site.giscus and page.giscus_comments %}
+  <div class="post-comments">
+    {% include giscus.liquid %}
+  </div>
+  {% endif %}
+
 </div>

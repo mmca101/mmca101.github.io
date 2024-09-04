@@ -1,21 +1,51 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header about-header">
-  {% comment %}
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-  {% endcomment %}
-    <h2 class="desc" style="margin: 34px 0 30px 0;">{{ page.subtitle }}<br>{{ page.subtitle_line_2 }}</h2>
-  </header>
 
+<style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer {
+      padding-top: 6px;
+      padding-bottom: 8px;
+      white-space: pre-line!important;
+    }
+    .mt-5 {
+      margin-top: 0px!important;
+    }
+</style>
+
+<div class="spacer">
+  <div class="post">
+    <header class="post-header about-header">
+    {% comment %}
+      <h1 class="post-title">
+        {% if site.title == 'blank' %}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+    {% endcomment %}
+      <h2 class="desc" style="margin-top: 0px; margin-bottom: 12px;">{{ page.subtitle_line_1 }}<br>{{ page.subtitle_line_2 }}<br>{{ page.subtitle_line_3 }}</h2>
+    </header>
+  </div>
+</div>
+
+  <script src="{{ '/assets/js/canvas-nest.js' | relative_url }}"></script>
+{% comment %} 
   <article>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -58,14 +88,6 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
     <!-- Social -->
     {% if page.social %}
       <div class="social">
@@ -77,6 +99,6 @@ layout: default
 
     {% if site.newsletter.enabled and site.footer_fixed %}
       {% include scripts/newsletter.liquid center=true %}
-    {% endif %}
+    {% endif %} {% endcomment %}
   </article>
 </div>

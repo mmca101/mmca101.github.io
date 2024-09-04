@@ -1,3 +1,14 @@
+  <!-- Initial styling element overwrites to avoid flicker -->
+  <style>
+    body {
+      background-color: #121212; /* Dark background color */
+      color: #ffffff; /* Optional: Light text color for better contrast */
+    }
+    .post-markers table, .post-markers th, .post-markers td, .post-references table, .post-references th, .post-references td {
+      color: inherit; /* Inherit color from parent specific styles for post-markers and post-references */
+    }
+  </style>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
@@ -29,6 +40,9 @@
   type="text/css"
   href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
 >
+
+<!-- Preload Relevant Font -->
+<link rel="preload" href="{{ '/assets/fonts/tabler-icons-outline.woff2?v3.0.1' | relative_url }}" as="font" type="font/woff2" crossorigin="anonymous">
 
 <!-- Code Syntax Highlighting -->
 <link

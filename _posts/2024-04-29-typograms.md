@@ -1,5 +1,7 @@
 ---
 layout: post
+status: draft
+search_visibility: false
 title: a post with typograms
 date: 2024-04-29 23:36:10
 description: this is what included typograms code could look like

@@ -1,10 +1,20 @@
 ---
 layout: page
 title: project 4
+status: draft
 description: another without an image
 img:
 importance: 3
 category: past
+giscus_comments:
+# relevant announcements / news
+news_tags: 
+news_count: 
+news_title: 
+# relevant posts / pages
+post_tags: 
+post_count: 
+posts_title: 
 ---
 
 Every project has a beautiful feature showcase page.
