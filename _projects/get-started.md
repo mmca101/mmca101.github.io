@@ -12,13 +12,13 @@ giscus_comments:
 toc:
   sidebar: right
 # relevant announcements / news
-news_tags: core
-news_count: 3
-news_title: Core Values & Principles
+news_tags: #core
+news_count: #3
+news_title: #Core Values & Principles
 # relevant posts / pages
-post_tags:
-post_count:
-posts_title:
+post_tags: #get-started
+post_count: #3
+posts_title: #What to read first
 ---
 
 <div class="profile float-right">
