@@ -6,7 +6,7 @@ title: frameworks # the website title (if blank, full name will be used instead)
 first_name: Michael
 middle_name: MC
 last_name: Altrock
-email: 
+email:
 description: # the ">" symbol means to ignore newlines until "footer_text:"
   A starting point of the journey to a healthy relationship with technology.
 footer_text: # text displayed in the footer
@@ -187,7 +187,6 @@ related_blog_posts:
 # -----------------------------------------------------------------------------
 
 collections:
-
   news:
     defaults:
       layout: post
@@ -215,7 +214,6 @@ collections:
     limit: 3 # leave blank to include all the faq items
     permalink: /:collection/:title/
 
-
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
@@ -224,12 +222,11 @@ collections:
 toc:
   min_level: 2
   max_level: 3
-  no_toc_section_class: 'no-toc'
-  list_class: 'toc-list'
-  sublist_class: 'toc-sublist'
-  item_class: 'toc-list-item'
-  link_class: 'toc-link'
-
+  no_toc_section_class: "no-toc"
+  list_class: "toc-list"
+  sublist_class: "toc-sublist"
+  item_class: "toc-list-item"
+  link_class: "toc-link"
 
 # Markdown and syntax highlight
 markdown: kramdown
@@ -326,8 +323,6 @@ display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] #
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
@@ -399,7 +394,6 @@ more_authors_animation_delay: 10 # more authors are revealed on click using anim
 enable_publication_thumbnails: true
 
 # -----------------------------------------------------------------------------
->>>>>>> alshedivat_master
 # Jekyll Link Attributes
 # -----------------------------------------------------------------------------
 

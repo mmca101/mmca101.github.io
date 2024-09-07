@@ -46,6 +46,7 @@ horizontal: true
 
 {% assign non_draft_projects = site.projects | where_exp: "project", "project.status != 'draft'" %}
 {% assign sorted_projects = non_draft_projects | sort: "importance" %}
+
   <!-- Generate cards for each project -->
 
 {% if page.horizontal %}

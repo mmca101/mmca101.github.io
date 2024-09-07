@@ -1,5 +1,5 @@
 name: Prettier code formatter
- 
+
 on:
   pull_request:
     branches:
