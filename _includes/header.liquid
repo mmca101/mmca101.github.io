@@ -1,9 +1,10 @@
 <header>
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
-      <div class="container">
-        {% if page.permalink != '/' or page.permalink == '/' %}
-          <h1 style="margin-bottom: 0px;line-height:24px;" data-toc-skip><a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+    <div class="container">
+      {% if page.permalink != '/' or page.permalink == '/' %}
+        <h1 style="margin-bottom: 0px;line-height:24px;" data-toc-skip>
+          <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
             {% if site.title == 'blank' %}
               {% if site.first_name %}
                 <span class="font-weight-bold">
@@ -19,19 +20,22 @@
             {% else %}
               {{- site.title -}}
             {% endif %}
-          </a></h1>
-        {% elsif site.enable_navbar_social %}
+          </a>
+        </h1>
+      {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
         <div class="navbar-brand social">{% include social.liquid %}</div>
       {% endif %}
 
-        <div class="navbar-nav ml-auto">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign nav_title = page.title %}
-            {% endif %}
-          {% endfor %}
+      <div class="navbar-nav ml-auto">
+        {% for page in site.pages %}
+          {% if page.permalink == '/' %}
+            {% assign nav_title = page.title %}
+          {% endif %}
+        {% endfor %}
 
-          {% comment %} <!-- About -->
+        {% comment %}
+          <!-- About -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">
               {{- about_title }}
@@ -39,7 +43,8 @@
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
-          </li> {% endcomment %}
+          </li>
+        {% endcomment %}
 
         <!-- Theme Toggle and Search Elements for larger viewport devices -->
         {% if site.search_enabled %}
@@ -48,17 +53,17 @@
             <button id="search-toggle" title="Search" onclick="openSearchModal()">
               <span class="nav-link search-item"><i class="ti ti-search"></i></span>
             </button>
-           </li>
+          </li>
         {% endif %}
-        
-          <!-- Other pages -->
-            <li class="nav-item active">
-              <a class="nav-link" href="/get-started/">
-                get started
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            {% comment %} 
+
+        <!-- Other pages -->
+        <li class="nav-item active">
+          <a class="nav-link" href="/start/">
+            start here
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        {% comment %}
             {% assign sorted_pages = site.pages | sort: 'nav_order' %}
             {% for p in sorted_pages %}
               {% if p.nav and p.autogen == null %}
@@ -111,18 +116,18 @@
               {% endif %}
             {% endfor %}
           {% endif %}
-          {% endcomment %}
-          {% if site.enable_darkmode %}
-            <!-- Toogle theme mode -->
-            <li class="nav-item toggle-container">
-              <button id="light-toggle" title="Change theme">
-                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
-                <i class="ti ti-moon-filled" id="light-toggle-light"></i>
-                <i class="ti ti-sun-filled" id="light-toggle-dark"></i>
-              </button>
-            </li>
-          {% endif %}
-        </div>
+        {% endcomment %}
+        {% if site.enable_darkmode %}
+          <!-- Toogle theme mode -->
+          <li class="nav-item toggle-container">
+            <button id="light-toggle" title="Change theme">
+              <i class="ti ti-sun-moon" id="light-toggle-system"></i>
+              <i class="ti ti-moon-filled" id="light-toggle-light"></i>
+              <i class="ti ti-sun-filled" id="light-toggle-dark"></i>
+            </button>
+          </li>
+        {% endif %}
+      </div>
     </div>
   </nav>
   {% if site.enable_progressbar %}
