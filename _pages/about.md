@@ -7,6 +7,7 @@ permalink: /
 subtitle_line_1: reframe
 subtitle_line_2: your relationship
 subtitle_line_3: with technology
+subtitle_line_4: and yourself
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
