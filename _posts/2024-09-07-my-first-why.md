@@ -10,15 +10,17 @@ tags: about
 categories: why
 ---
 
+<b>Hi.</b>
+
+<p>I’m Michael.</p>
+
 <div class="profile float-right">
 <figure>
   <img src="/assets/img/about_image_michael_altrock.jpg" class="img-margin img-fluid z-depth-1 rounded" alt="about_image_michael_altrock.jpg" loading="eager">
 </figure>
 </div>
-<div class="clearfix text-justify-last-left">
-<b>Hi.</b>
-<p>I’m Michael.</p>
 
+<div class="clearfix text-justify-last-left">
 <p>For the past 15 years, I’ve worked inside and around complex systems — corporate structures, teams, digital products, operational workflows — often through the lens of health, performance, and sustainability. I’ve managed large teams, run a restaurant, built and scaled online stores, worked on development, SEO and cybersecurity projects, designed documentation and value systems, and coached individuals and organizations on health and resilience. Alongside that, I’ve always been involved in movement arts and music projects.
 </p>
 
