@@ -131,7 +131,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: frameworks # blog_name will be displayed in your blog page
-blog_description: reframe your relationship with technology # blog_description will be displayed in your blog page
+blog_description: A public lab for human-centered systems thinking in high-stakes enviroments # blog_description will be displayed in your blog page
 permalink: /blog/:year/:title/
 lsi: true # produce an index for related posts
 
