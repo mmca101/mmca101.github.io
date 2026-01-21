@@ -1,7 +1,7 @@
 ---
 layout: post
 title: heroes of our time
-status: published
+status: draft
 search_visibility: true
 date: 2024-09-01 21:20:00
 description: an example of a blog post with table of contents on a sidebar

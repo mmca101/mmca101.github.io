@@ -2,15 +2,16 @@
 layout: post
 status: published
 search_visibility: true
-title: what are frameworks
-date: 2024-09-07 20:01:00
+permalink: /article/triage-systems/
+title: How triage systems structure human judgment under pressure.
+date: 2026-01-21 21:08:03
 description:
-tags: what frameworks
-categories: foundation
+tags: triage healtchare
+categories: decision-making
 thumbnail: assets/img/9.jpg
 ---
 
-Frameworks are everywhere. They are everything that provides context.
+How triage systems structure human judgment under pressure.
 
 <div class="profile float-right">
     <figure>
@@ -18,9 +19,11 @@ Frameworks are everywhere. They are everything that provides context.
     </figure>
 </div>
 <div class="clearfix text-justify-last-left">
-<p>Remember the feeling when you walk from one room into another and forgot what you came into the room for? Or the saying "you are the sum of the 5 people you spend the most time with"? Remember when you made it a habit to study on your bed for tests during college and slept less rested? Or when you had to make due with the lockdown changes and started working out from in your living room or try to do work with your laptop on the couch and felt more distracted and less energized during thr process?</p>
+<p>Lorem triagium dolor sit amet, consectetuer adipiscing elit, sed tempor incididunt ut labore et dolore magna aliqua. Vestibulum symptomatica interdum, status variabilis, et signalium congestio sub tempore limitato concurrunt. Modulatio prioritis, categorisatio fluxuum, et compressio informatica operantur in plano decisionale continuo.</p>
 
-<p>All of those are examples of the impact of different frameworks. They are a testament to the biggtes strength and the biggest weakness of us human beings – our ability to adapt and change. I know its still a very present saying that "people never change" but contrary to that change is literally what our entire evolutioary existance is based on. Yet this ability makes us vulnerable in todays modern world mainly becausse, lets call it, << our operating system is a little out dated >>.</p>
+<p>Haec structurae exempla demonstrant quomodo systemata adaptiva actionem moderentur. Classificatio parametricum, limina numerica, et gradus escalationis functionem sustentant, sed simul ambiguitatem introducunt. Inter facilitationem et restrictionem semper persistit tensio infrastructuralis.</p>
+
+<p>Praesentium fluxus decisionale non sequitur lineam unicam, sed oscillat inter nodos informationis et interruptiones contextuales. Variabiles attentionis, segmenta prioritatis, et buffers temporales interagunt sine centro stabile. In hoc campo, actio emergit ex cohaesione partiali potius quam ex consilio explicito, dum structurae latent sub superficie operationis cotidianae.</p>
 </div>
 
 <div class="profile float-left">
@@ -29,9 +32,9 @@ Frameworks are everywhere. They are everything that provides context.
     </figure>
 </div>
 <div class="clearfix text-justify-last-left">
-<p>Regardless if you are the one who wrote this, or if you are a future version of the same person, or even a future version of a different person – you probably felt this just recently: almost like beng a time traverler of your own existance sometimes only passing by events of your own life. That result of feeling overwhealmed usually comes from a lack of frameworks to process your experiences.</p>
+<p>Indifferenter utrum haec lectio sit retroactiva vel praesentis momenti, saepe emergit sensatio fragmentationis. Contextus dissolvitur, temporis perceptio contrahitur, et judicium transit a deliberatione ad recognitio schematica. Effectus hi sunt normales in ambitu systematum arcte connexorum.</p>
 
-<p>Frameworks are like an operating system, providing both a hirachy of values, operational principles and much more. Most of the time they evolve organically and exist unnoticed. When the organic ones are insufficient understanding their underlying structure and is key to intentioally build them yourself. Even outside of this, choosing to use conscious build frameworks can help you shape the process of your own thought processes and develop a foundation of frameworks that build on to one another.</p>
+<p>Ex prospectu architecturae, triagium agit ut stratum inter perceptionem humanam et responsionem operationalem. Suppositiones implicitae, saepe organice formatae, manent invisibiles. Cum hae structurae iam non congruant cum condicionibus actualibus, frictio functionalis apparet.</p>
+
+<p>Consistentia principiorum per strata decisionalia efficit stabilitatem relativa. Pro reliance exclusiva in emergentia, structurae explicite articulatae permittunt revisionem, calibrationem, et transpositionem. Hoc modum continuitatis praebet sine abolendo discretionem humanam ubi adhuc necessaria est.</p>
 </div>
-
-Having consistant values and principles builds a strong meta framework across all frameworks. Thats why it can be a really useful tool to not wait for organically
