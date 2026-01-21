@@ -12,19 +12,7 @@ categories: why
 
 <div class="profile float-right">
 <figure>
-  <picture>
-    <!-- Auto scaling with imagemagick -->
-    <!--
-      See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
-      https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
-    -->
-    
-      <source class="responsive-img-srcset" srcset="/assets/img/about_image_michael_altrock-480.webp 480w,/assets/img/about_image_michael_altrock-800.webp 800w,/assets/img/about_image_michael_altrock-1400.webp 1400w," sizes="(min-width: 900px) 261.0px, (min-width: 576px)
-      30vw, 95vw" type="image/webp">
-    
-    <img src="/assets/img/about_image_michael_altrock.jpg?664f6594f73296fadd28380f26588cc7" class="img-margin img-fluid z-depth-1
-      rounded" width="100%" height="auto" alt="about_image_michael_altrock.jpg" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-  </picture>
+  <img src="/assets/img/about_image_michael_altrock.jpg" class="img-margin img-fluid z-depth-1 rounded" alt="about_image_michael_altrock.jpg" loading="eager">
 </figure>
 </div>
 <div class="clearfix text-justify-last-left">

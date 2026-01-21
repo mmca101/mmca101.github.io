@@ -12,16 +12,28 @@
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
     {% if site.imagemagick.enabled %}
-      <source
-        class="responsive-img-srcset"
-        srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
-        {% if include.sizes %}
-          sizes="{{include.sizes}}"
-        {% else %}
-          sizes="95vw"
+      {% assign webp_srcset = '' %}
+      {% for i in site.imagemagick.widths %}
+        {% assign candidate_webp = img_path | append: '-' | append: i | append: '.webp' %}
+        {% capture candidate_exists %}{% file_exists {{ candidate_webp }} %}{% endcapture %}
+        {% if candidate_exists | strip == 'true' %}
+          {% capture candidate_webp_url %}{{ candidate_webp | relative_url }}{% endcapture %}
+          {% assign webp_srcset = webp_srcset | append: candidate_webp_url | append: ' ' | append: i | append: 'w,' %}
         {% endif %}
-        type="image/webp"
-      >
+      {% endfor %}
+
+      {% if webp_srcset != '' %}
+        <source
+          class="responsive-img-srcset"
+          srcset="{{ webp_srcset }}"
+          {% if include.sizes %}
+            sizes="{{include.sizes}}"
+          {% else %}
+            sizes="95vw"
+          {% endif %}
+          type="image/webp"
+        >
+      {% endif %}
     {% endif %}
     <img
       src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
