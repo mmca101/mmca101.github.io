@@ -11,11 +11,11 @@
       See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
-    {% if site.imagemagick.enabled %}
+    {% if site.imagemagick.enabled and site.imagemagick_available %}
       {% assign webp_srcset = '' %}
       {% for i in site.imagemagick.widths %}
         {% assign candidate_webp = img_path | append: '-' | append: i | append: '.webp' %}
-        {% capture candidate_exists %}{% file_exists {{ candidate_webp }} %}{% endcapture %}
+        {% capture candidate_exists %}{% file_exists "{{ candidate_webp }}" %}{% endcapture %}
         {% if candidate_exists | strip == 'true' %}
           {% capture candidate_webp_url %}{{ candidate_webp | relative_url }}{% endcapture %}
           {% assign webp_srcset = webp_srcset | append: candidate_webp_url | append: ' ' | append: i | append: 'w,' %}
