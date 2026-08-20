@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" font-family="'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5b6472"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { fill: #f7f8fa; stroke: #5b6472; stroke-width: 1.5; }
+    .core { fill: #eef1f6; stroke: #2f3742; stroke-width: 2; }
+    .label { fill: #2f3742; font-size: 13px; }
+    .sub { fill: #5b6472; font-size: 11.5px; }
+    .edge { stroke: #5b6472; stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+  </style>
+
+  <!-- Instructor A -->
+  <rect class="box" x="20" y="30" width="190" height="60" rx="4"/>
+  <text class="label" x="35" y="55">Instructor A</text>
+  <text class="sub" x="35" y="74">Google Sheet A</text>
+
+  <!-- Instructor B -->
+  <rect class="box" x="20" y="170" width="190" height="60" rx="4"/>
+  <text class="label" x="35" y="195">Instructor B</text>
+  <text class="sub" x="35" y="214">Google Sheet B</text>
+
+  <!-- Instructor C -->
+  <rect class="box" x="20" y="310" width="190" height="60" rx="4"/>
+  <text class="label" x="35" y="335">Instructor C</text>
+  <text class="sub" x="35" y="354">Google Sheet C</text>
+
+  <!-- convergence node -->
+  <circle cx="260" cy="200" r="3" fill="#5b6472"/>
+  <path class="edge" d="M210,60 C240,60 240,140 258,197"/>
+  <path class="edge" d="M210,200 L295,200"/>
+  <path class="edge" d="M210,340 C240,340 240,260 258,203"/>
+
+  <!-- SiM-C3RT core -->
+  <rect class="core" x="330" y="155" width="200" height="90" rx="4"/>
+  <text class="label" x="345" y="185" font-weight="600">SiM-C3RT</text>
+  <text class="sub" x="345" y="204">stateless, index.html</text>
+  <text class="sub" x="345" y="220">no server, no content</text>
+  <text class="sub" x="345" y="236">stored inside the tool</text>
+
+  <!-- edge to learner -->
+  <path class="edge" d="M530,200 L650,200"/>
+
+  <!-- Learner -->
+  <rect class="box" x="650" y="155" width="190" height="90" rx="4"/>
+  <text class="label" x="665" y="185">Learner</text>
+  <text class="sub" x="665" y="204">browser-local:</text>
+  <text class="sub" x="665" y="220">own API key,</text>
+  <text class="sub" x="665" y="236">own results</text>
+</svg>
