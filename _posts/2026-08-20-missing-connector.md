@@ -43,9 +43,10 @@ thumbnail:
 <p>The design had to answer that question architecturally, not organizationally. So the question bank never lives inside the tool. It loads live, on every session, from an externally managed Google Sheet — one per instructor, per cohort, per need. The tool stays neutral infrastructure; content responsibility stays exactly where it already was.</p>
 </div>
 
-<div class="profile">
+<div class="profile float-right">
     <figure>
         <img src="/assets/img/sim-c3rt-architecture.svg" class="img-fluid rounded z-depth-1" alt="Diagram: Instructor A, B, and C each maintain their own Google Sheet, which feed into SiM-C3RT, a stateless index.html with no server and no stored content, which in turn serves the Learner, who supplies their own API key and keeps their own results in the browser.">
+        {% include figure.liquid path="assets/img/11.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </figure>
 </div>
 
